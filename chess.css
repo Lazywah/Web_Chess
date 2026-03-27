@@ -1,0 +1,163 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    /* overflow-x: hidden; */
+    background: url(image/background/11.jpg);
+    background-position: left;
+    background-size: 102vw 126vh;
+    min-height: 100vh;
+}
+
+.container
+{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+}
+
+.div
+{
+    display: flex;
+}
+
+ul
+{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+li
+{
+    list-style: none;
+    display: grid;
+    place-items: center;
+    font-size: 0;
+}
+
+.box, .gridcode
+{
+    margin: .5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.gridcode
+{
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.gridcode.empty
+{
+    visibility: hidden;
+}
+
+h1
+{
+    margin: 3px 0 20px 0;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #222;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.togw
+{
+    margin: 20px 0px;
+    font-size: 1.5rem;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.togb
+{
+    margin: 20px 0px;
+    font-size: 1.5rem;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000;
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#reset-btn
+{
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 3px 0;
+    cursor: pointer;
+}
+
+.all-img
+{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    position: relative;
+}
+
+@media (max-width:650px)
+{
+    .box, .gridcode
+    {
+        width: 7.7vw;
+        height: 7.7vw;
+    }
+    .all-img
+    {
+        width: 7.7vw;
+        height: 7.7vw;
+    }
+    h1
+    {
+        font-size: 6.1vw;
+    }
+    #top
+    {
+        font-size: 7.7vw;
+    }
+    #reset-btn
+    {
+        font-size: 3.2vw;
+    }
+}
+
+.selecting
+{
+    animation: chess-selection 1s infinite alternate;
+}
+
+@keyframes chess-selection{
+    form{
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    to{
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+}

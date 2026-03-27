@@ -1,2 +1,4 @@
 /resource/
 .vscode/*.json
+node_modules/
+.download/
